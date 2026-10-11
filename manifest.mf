@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Main-Class: pzobserver.v2.InventoryReader
+Agent-Class: pzobserver.v2.InventoryReader
+Can-Redefine-Classes: false
+Can-Retransform-Classes: false
+

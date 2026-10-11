@@ -1,0 +1,25 @@
+# Publish only reviewed project-owned source, tests, manifests, docs and skills.
+# Local binaries, live snapshots, saves, logs, machine settings and evidence stay local.
+/*
+!/.gitignore
+!/README.md
+!/InventoryReader.java
+!/InventoryReaderTest.java
+!/NearbyFoodReader2.java
+!/NearbyFoodReaderTest.java
+!/FoodDetails.java
+!/FoodDetailsTest.java
+!/manifest.mf
+!/nearby-manifest.mf
+!/read-inventory.ps1
+!/read-nearby-food.ps1
+!/.agents/
+/.agents/*
+!/.agents/skills/
+/.agents/skills/*
+!/.agents/skills/zomboid-carried-inventory/
+!/.agents/skills/zomboid-nearby-food/
+/.agents/skills/zomboid-carried-inventory/*
+!/.agents/skills/zomboid-carried-inventory/SKILL.md
+/.agents/skills/zomboid-nearby-food/*
+!/.agents/skills/zomboid-nearby-food/SKILL.md
