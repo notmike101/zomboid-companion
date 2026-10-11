@@ -5,7 +5,7 @@ $games = @(Get-CimInstance Win32_Process -Filter "Name = 'ProjectZomboid64.exe'"
 if ($games.Count -ne 1) {
     throw "Expected one running game at $gameExe; found $($games.Count)."
 }
-$readerJar = Join-Path $PSScriptRoot 'inventory-reader-v2.jar'
+$readerJar = Join-Path $PSScriptRoot 'inventory-reader-v3.jar'
 if (-not (Test-Path -LiteralPath $readerJar -PathType Leaf)) {
     throw "Reader is not built: $readerJar. See README.md."
 }

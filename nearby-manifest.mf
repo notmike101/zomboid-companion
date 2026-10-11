@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Main-Class: pzobserver.v2.NearbyFoodReader2
-Agent-Class: pzobserver.v2.NearbyFoodReader2
+Main-Class: pzobserver.v3.NearbyFoodReader2
+Agent-Class: pzobserver.v3.NearbyFoodReader2
 Can-Redefine-Classes: false
 Can-Retransform-Classes: false
 

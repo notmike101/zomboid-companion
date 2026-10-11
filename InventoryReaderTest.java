@@ -1,4 +1,4 @@
-package pzobserver.v2;
+package pzobserver.v3;
 import java.util.*;
 
 public class InventoryReaderTest {
@@ -13,6 +13,9 @@ public class InventoryReaderTest {
         public int getConditionMax() { return 10; }
         public boolean IsInventoryContainer() { return bag != null; }
         public boolean isHidden() { return hidden; }
+        public boolean IsFood() { return false; }
+        public String getCategory() { return "Normal"; }
+        public String getDisplayCategory() { return "Normal"; }
         public Container getInventory() { return bag; }
     }
     public static class Container {

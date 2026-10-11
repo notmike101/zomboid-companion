@@ -1,4 +1,4 @@
-package pzobserver.v2;
+package pzobserver.v3;
 import com.sun.tools.attach.VirtualMachine;
 import java.lang.instrument.Instrumentation;
 import java.lang.reflect.*;
@@ -162,6 +162,7 @@ public class InventoryReader {
         row.put("equipment", equipment.getOrDefault(item, List.of()));
         row.put("condition", call(item, "getCondition"));
         row.put("condition_max", call(item, "getConditionMax"));
+        FoodDetails.describe(item, row);
         rows.add(row);
         if ((boolean)call(item, "IsInventoryContainer"))
             collect(call(item, "getInventory"), path + " / " + row.get("name") + " [" + row.get("id") + "]",

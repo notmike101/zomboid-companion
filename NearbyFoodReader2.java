@@ -1,4 +1,4 @@
-package pzobserver.v2;
+package pzobserver.v3;
 import com.sun.tools.attach.VirtualMachine;
 import java.lang.instrument.Instrumentation;
 import java.nio.file.*;
@@ -134,13 +134,7 @@ public class NearbyFoodReader2 {
     }
 
     static void describeItem(Object item, Map<String,Object> row) throws Exception {
-        boolean food = (boolean)get(item,"IsFood");
-        row.put("is_food",food); row.put("category",get(item,"getCategory"));
-        row.put("display_category",get(item,"getDisplayCategory"));
-        if (food) {
-            row.put("freshness",(boolean)get(item,"isRotten") ? "rotten" : (boolean)get(item,"isFresh") ? "fresh" : "stale");
-            row.put("frozen",get(item,"isFrozen")); row.put("cooked",get(item,"isCooked")); row.put("burnt",get(item,"isBurnt"));
-        }
+        FoodDetails.describe(item, row);
     }
     static void collectNearby(Object container, String path, Object player, Class<?> characterBase,
         Set<Object> seen, List<Map<String,Object>> rows, List<InventoryReader.ContainerState> states, int depth) throws Exception {

@@ -1,10 +1,10 @@
-package pzobserver.v2;
+package pzobserver.v3;
 import java.util.*;
 
 public class NearbyFoodReaderTest {
-    public static class Food extends InventoryReaderTest.Item {
+    public static class Food extends FoodDetailsTest.Food {
         boolean fresh = true, rotten, frozen, cooked, burnt;
-        Food() { super(99, "Vegetable", 3); }
+        Food() { super(99); name = "Vegetable"; count = 3; }
         public boolean IsFood() { return true; }
         public String getCategory() { return "Food"; }
         public String getDisplayCategory() { return "Food"; }
